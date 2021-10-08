@@ -16,7 +16,6 @@ $.each(sec, function(value) {
   });
 
   api.modifyClass("component:navigation-item", {
-    pluginId: PLUGIN_ID,
     active: Ember.computed("contentFilterMode", "filterMode", function() {
       let contentFilterMode = this.get("content").get("filterMode");
 
