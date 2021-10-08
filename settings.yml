@@ -1,6 +1,6 @@
 Nav_links:
   type: list
-  default: "Latest;topics with recent posts;/latest|Categories;all topics grouped by category;/categories|Top;the most active topics in the last year, month, week or day;/top"
+  default: "Követési folyam;bejegyzések az általad követett felhasználóktól;/my/follow/feed"
   description:
     en: "Semicolon delimited in this order: display name;description;URL. Display name is the text that shows on the menu. Description is the help text that shows on hover. URL is the path for the link."
 Hide_dropdowns:
