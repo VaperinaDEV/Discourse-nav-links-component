@@ -16,7 +16,7 @@ $.each(sec, function(value) {
   });
 
   api.modifyClass("component:navigation-item", {
-    active: Ember.computed("contentFilterMode", "filterMode", function() {
+    active: Discourse.computed("contentFilterMode", "filterMode", function() {
       let contentFilterMode = this.get("content").get("filterMode");
 
       if (window.location.pathname === location) {
