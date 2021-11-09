@@ -16,6 +16,8 @@ $.each(sec, function(value) {
   });
 
   api.modifyClass("component:navigation-item", {
+    pluginId: "DiscourseNavLinkComponent",
+    
     active: Ember.computed("contentFilterMode", "filterMode", function() {
       let contentFilterMode = this.get("content").get("filterMode");
 
