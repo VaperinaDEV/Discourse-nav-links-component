@@ -9,7 +9,7 @@ $.each(sec, function(value) {
   let sec = $.map(this.split(";"), $.trim),
     filter = sec[0].replace(/\s+/g, "-").toLowerCase(),
     location = sec[2],
-    icon = iconNode('sec[3].toLowerCase()');
+    icon = iconNode(sec[3]);
 
   api.addNavigationBarItem({
     name: filter,
