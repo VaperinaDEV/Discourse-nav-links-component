@@ -7,12 +7,14 @@ $.each(sec, function(value) {
   var sec = $.map(this.split(";"), $.trim),
     filter = sec[0].replace(/\s+/g, "-").toLowerCase(),
     location = sec[2];
+    icon = iconNode(sec[3].toLowerCase());
 
   api.addNavigationBarItem({
     name: filter,
     displayName: sec[0],
     title: sec[1],
-    href: sec[2]
+    href: sec[2],
+    icon: sec[3]
   });
 
   api.modifyClass("component:navigation-item", {
