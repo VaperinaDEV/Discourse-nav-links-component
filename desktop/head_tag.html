@@ -3,20 +3,16 @@
 let nmlt = settings.Nav_links,
   sec = $.map(nmlt.split("|"), $.trim);
   
-const { iconNode } = require("discourse-common/lib/icon-library");
-
 $.each(sec, function(value) {
-  let sec = $.map(this.split(";"), $.trim);
-  let filter = sec[0].replace(/\s+/g, "-").toLowerCase();
-  let location = sec[2];
-  let icon = iconNode(sec[3].toLowerCase());
+  let sec = $.map(this.split(";"), $.trim),
+      filter = sec[0].replace(/\s+/g, "-").toLowerCase(),
+      location = sec[2];
 
   api.addNavigationBarItem({
     name: filter,
     displayName: sec[0],
     title: sec[1],
-    href: sec[2],
-    icon
+    href: sec[2]
   });
 
   api.modifyClass("component:navigation-item", {
